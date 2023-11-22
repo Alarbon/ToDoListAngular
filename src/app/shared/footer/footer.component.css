@@ -1,0 +1,27 @@
+.social-icons {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+
+
+}
+
+.social-icons a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-left: 2%;
+  margin-right: 2%;
+  
+ 
+  color: white;
+}
+
+.social-icons a svg{
+  margin-right: 10px;
+}
+
+.social-icons a:hover {
+  color: rgb(180, 174, 174);
+}

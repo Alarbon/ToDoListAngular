@@ -1,0 +1,65 @@
+.example-form {
+  min-width: 300px; /* Ajusta según tus necesidades */
+  max-width: 500px;
+  width: 100%;
+  margin: auto; /* Centra el formulario */
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 4em; /* Reduce el espacio entre el formulario y el borde del contenedor */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+
+  @media screen and (max-width: 600px) {
+  padding: 0px;
+  }
+}
+
+.add-button {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Media query para pantallas pequeñas (dispositivos móviles) */
+@media (max-width: 600px) {
+  .example-form {
+    padding: 1em; /* Reduce el padding para dispositivos móviles */
+  }
+}
+
+.instructions-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  @media screen and (max-width: 600px) {
+    width: 90%;
+  }
+}
+.title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  @media screen and (max-width: 600px) {
+    font-size: 1rem;
+    
+  }
+}
+
+.instructions {
+  font-size: 1.2rem;
+  color: #555;
+  text-decoration: justify;
+
+  @media screen and (max-width: 600px) {
+    font-size: 0.8rem;
+    
+  }
+}

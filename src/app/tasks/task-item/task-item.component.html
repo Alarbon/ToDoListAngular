@@ -1,0 +1,28 @@
+<mat-card class="card" [ngClass]="{'card-done': task.done, 'fade-in-left': task.done, 'fade-in-right': !task.done}">
+  <mat-card-header>
+    <mat-card-title>{{task.title}} </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div *ngIf="showFullDescription; else shortDescription">
+      <p>{{task.description}} </p>
+    </div>
+    <ng-template #shortDescription>
+      <p>{{task.description | slice:0:30}} {{task.description.length>30 ? '...' : ''}}</p>
+    </ng-template>
+
+    <div *ngIf="task.description.length>29">
+
+      <button mat-button (click)="toggleDescription()">
+        {{showFullDescription ? 'Mostrar menos' : 'Leer más'}}
+      </button>
+    </div>
+  </mat-card-content>
+  <mat-card-actions
+    ngClass="{{task.description.length ==0 ? 'botones-espaciados-vacios' : task.description.length>29 ? '' : 'botones-espaciados'}}">
+    <button mat-button color="primary" (click)="openEditDialog()">EDIT</button>
+    <button mat-button color="warn" (click)="openDeleteDialog()">DELETE</button>
+    <mat-slide-toggle (change)="toggleDone(task.id)" [checked]="task.done" style="text-align: center; font-weight: bold;">
+      <span  [ngStyle]="{'color': task.done ? 'green' : 'red'}">{{task.done ? 'COMPLETADA' : 'NO COMPLETADA'}}</span>
+    </mat-slide-toggle>
+  </mat-card-actions>
+</mat-card>

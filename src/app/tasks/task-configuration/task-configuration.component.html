@@ -1,0 +1,18 @@
+<div class="button-container">
+    <div class="instructions">
+        <p>Administra tus tareas con estas opciones:</p>
+    </div>
+
+    <button mat-raised-button color="accent" class="custom-button" (click)="borrarTareasCompletadas()">
+        <mat-icon class="button-icon">done_all</mat-icon>
+        Borrar Tareas Completadas
+    </button>
+
+    <button mat-raised-button color="warn" class="custom-button" (click)="borrarTodasLasTareas()">
+        <mat-icon class="button-icon">delete</mat-icon>
+        Borrar Todas las Tareas
+    </button>
+    <div class="instructions-down">
+        <p>¡Cuidado! No se puede deshacer esta acción. Por favor, confirma la elección.</p>
+    </div>
+</div>

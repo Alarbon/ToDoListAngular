@@ -1,0 +1,18 @@
+<div *ngIf="getTasks().length !== 0">
+ 
+  <div class="task-container scrollbar">
+    
+
+    <div *ngFor="let task of getTasksNotDone()">
+      <app-task-item [task]="task"></app-task-item>
+    </div>
+
+    <div *ngFor="let task of getTasksDone()">
+      <app-task-item [task]="task"></app-task-item>
+    </div>
+
+  </div>
+</div>
+<div *ngIf="getTasks().length === 0">
+  <p class="no-tasks">No hay tareas actualmente.</p>
+</div>

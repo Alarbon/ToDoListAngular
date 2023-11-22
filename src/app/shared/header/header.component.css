@@ -1,0 +1,25 @@
+/* header.component.css */
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-row {
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.logo {
+  height: 80%; 
+  width: auto; 
+  margin-right: 16px; 
+}

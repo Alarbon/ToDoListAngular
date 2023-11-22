@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Edita la descripción de la tarea</h1>
+    <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Título de la tarea (máximo 25 caracteres)</mat-label>
+            <input matInput value="{{data.title}}" maxlength="25" name="title" [(ngModel)]="data.title">
+
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+            <mat-label>Descripción de la tarea</mat-label>
+            <textarea matInput value="{{data.description}}" name="description"
+                [(ngModel)]="data.description"></textarea>
+
+        </mat-form-field>
+
+        <div mat-dialog-actions>
+            <button color="warn" mat-button (click)="onNoClick()">Cancelar</button>
+            <button color="primary" mat-button [mat-dialog-close]="data" >Guardar Cambios</button>
+        </div>
+
+    </form>
+</div>

@@ -1,0 +1,29 @@
+<!-- add-task.component.html -->
+<div class="instructions-container">
+  <h1 class="title">Agrega una nueva tarea</h1>
+
+  <p class="instructions">Agrega tu tarea a la lista! Ten en cuenta que la descripción es opcional pero el título es
+    obligatorio y no puede superar los 25 caracteres.</p>
+</div>
+
+<div class="container">
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Título de la tarea (máximo 25 caracteres)</mat-label>
+      <input matInput placeholder="Examen Angular" maxlength="25" #title>
+      <small style="opacity: 0.5;">(Obligatorio)</small>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripción de la tarea</mat-label>
+      <textarea matInput placeholder="El examen será un martes" #description></textarea>
+
+      <small style="opacity: 0.5;">(Opcional)</small>
+    </mat-form-field>
+
+    <button class="add-button" mat-fab extended color="primary" (click)="onAddTask()">
+      Agregar Tarea
+    </button>
+
+  </form>
+</div>

@@ -1,0 +1,32 @@
+/* your-edit-dialog.component.css */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
+.example-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+mat-form-field {
+  margin-bottom: 20px;
+}
+
+mat-dialog-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 10px;
+  }
+}

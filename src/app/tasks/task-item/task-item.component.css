@@ -1,0 +1,70 @@
+.card {
+  max-width: 400px;
+  min-height: 200px;
+  margin: 1rem;
+  background-color:rgb(212, 182, 240) ;
+}
+
+mat-slide-toggle {
+  margin-left: auto;
+  width: 19ch; /* 'ch' es una unidad que representa el ancho del carácter '0' */
+}
+
+.card-done {
+  margin: 1rem;
+  background-color: rgb(216, 201, 229)  ;
+}
+
+.card-content {
+  max-height: 150px;
+  overflow: hidden;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.card-content p {
+  margin: 0; /* Elimina el margen predeterminado del párrafo */
+}
+
+.card-content button {
+  white-space: nowrap; /* Evita que el botón se envuelva al siguiente renglón */
+}
+
+.botones-espaciados{
+  margin-top: 50px;
+}
+.botones-espaciados-vacios{
+  margin-top: 80px;
+}
+
+/* app.component.css (o tu archivo de estilos correspondiente) */
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in-left {
+  animation: fadeInLeft 1s ease;
+}
+
+.fade-in-right {
+  animation: fadeInRight 1s ease;
+}

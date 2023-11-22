@@ -1,0 +1,25 @@
+/* app.component.css */
+:host {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  min-height: 100vh;
+}
+
+.main-container {
+  flex: 1;
+  background-color: lavender;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.content {
+  padding: 20px;
+  margin-top: 64px;
+}
+
+app-header {
+  z-index: 2;
+}
