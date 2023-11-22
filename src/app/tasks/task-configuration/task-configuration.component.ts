@@ -31,10 +31,12 @@ export class TaskConfigurationComponent {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
        this.taskService.clearTasksDone();
-      }
-      this.notificationService.showNotification(
+       
+       this.notificationService.showNotification(
         'Tareas completadas borradas con exito!',
       )
+      }
+      
     });
   }
   borrarTodasLasTareas() {
@@ -51,10 +53,12 @@ export class TaskConfigurationComponent {
     dialogRef.afterClosed().subscribe((result) => {
       if (result) {
        this.taskService.clearTasks();
-      }
-      this.notificationService.showNotification(
+
+       this.notificationService.showNotification(
         'Tareas borradas con exito!',
       )
+      }
+     
     });
   }
 }
